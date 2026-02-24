@@ -1,0 +1,2244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>3M Window Film — Sales Agent Learning Guide</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap"
+    rel="stylesheet">
+  <style>
+    :root {
+      --red: #D32F2F;
+      --dark: #121212;
+      --darker: #0A0A0A;
+      --surface: #FFFFFF;
+      --surface2: #F8FAFC;
+      --border: #E2E8F0;
+      --text: #1E293B;
+      --text-muted: #64748B;
+      --gold: #B8860B;
+      --blue: #2563EB;
+      --green: #16A34A;
+      --teal: #0D9488;
+      --purple: #9333EA;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #F8FAFC;
+      color: var(--text);
+      font-family: 'DM Sans', sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* HERO */
+    .hero {
+      background: var(--dark);
+      padding: 80px 40px;
+      display: flex;
+      align-items: center;
+      gap: 40px;
+      position: relative;
+      overflow: hidden;
+      color: white;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -100px;
+      right: -100px;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(211, 47, 47, 0.15) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .hero-badge {
+      background: var(--red);
+      color: white;
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 14px;
+      letter-spacing: 2px;
+      padding: 6px 14px;
+      border-radius: 4px;
+      display: inline-block;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 12px rgba(211, 47, 47, 0.3);
+    }
+
+    .hero h1 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(48px, 8vw, 90px);
+      line-height: 0.95;
+      letter-spacing: 1px;
+      color: #FFFFFF;
+      margin-bottom: 16px;
+    }
+
+    .hero h1 span {
+      color: var(--red);
+    }
+
+    .hero p {
+      color: #94A3B8;
+      max-width: 550px;
+      font-size: 17px;
+      line-height: 1.5;
+    }
+
+    .hero-logo {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 140px;
+      color: white;
+      opacity: 0.1;
+      position: absolute;
+      right: 40px;
+      top: 50%;
+      transform: translateY(-50%);
+      letter-spacing: -2px;
+      pointer-events: none;
+    }
+
+    /* NAV TABS */
+    .tabs {
+      background: #FFFFFF;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      gap: 0;
+      overflow-x: auto;
+      padding: 0 40px;
+      scrollbar-width: none;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    }
+
+    .tabs::-webkit-scrollbar {
+      display: none;
+    }
+
+    .tab {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--text-muted);
+      padding: 20px 24px;
+      border: none;
+      background: none;
+      cursor: pointer;
+      white-space: nowrap;
+      border-bottom: 3px solid transparent;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .tab:hover {
+      color: var(--text);
+      background: rgba(0, 0, 0, 0.02);
+    }
+
+    .tab.active {
+      color: var(--red);
+      border-bottom-color: var(--red);
+    }
+
+    /* CONTENT */
+    .content {
+      display: none;
+      padding: 60px 40px;
+      max-width: 1200px;
+      margin: 0 auto;
+      animation: fadeUp 0.4s ease-out;
+    }
+
+    .content.active {
+      display: block;
+    }
+
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* SECTION TITLES */
+    .section-title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 48px;
+      letter-spacing: 1px;
+      color: var(--dark);
+      margin-bottom: 8px;
+    }
+
+    .section-sub {
+      color: var(--text-muted);
+      font-size: 16px;
+      margin-bottom: 48px;
+    }
+
+    /* CARDS */
+    .card {
+      background: #FFFFFF;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 32px;
+      margin-bottom: 20px;
+      transition: all 0.3s ease;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    }
+
+    .card:hover {
+      border-color: var(--red);
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+      transform: translateY(-2px);
+    }
+
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 24px;
+      margin-bottom: 32px;
+    }
+
+    /* FILM CARD */
+    .film-card {
+      background: #FFFFFF;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .film-card:hover {
+      transform: translateY(-5px);
+      border-color: var(--red);
+      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+    }
+
+    .film-card-header {
+      padding: 24px 24px 20px;
+      border-bottom: 1px solid var(--surface2);
+    }
+
+    .film-series {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 26px;
+      letter-spacing: 0.5px;
+      color: var(--dark);
+      margin-bottom: 4px;
+    }
+
+    .film-type-badge {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      padding: 4px 10px;
+      border-radius: 4px;
+      margin-bottom: 12px;
+    }
+
+    .badge-auto {
+      background: #EEF2FF;
+      color: #4338CA;
+    }
+
+    .badge-arch {
+      background: #F0FDFA;
+      color: #0D9488;
+    }
+
+    .badge-safety {
+      background: #FFFBEB;
+      color: #B45309;
+    }
+
+    .badge-solar {
+      background: #F0FDF4;
+      color: #16A34A;
+    }
+
+    .film-desc {
+      color: var(--text-muted);
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    .film-card-body {
+      padding: 20px 24px;
+      flex-grow: 1;
+    }
+
+    .stat-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 0;
+      border-bottom: 1px solid var(--surface2);
+      font-size: 14px;
+    }
+
+    .stat-row:last-child {
+      border-bottom: none;
+    }
+
+    .stat-label {
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+
+    .stat-value {
+      font-family: 'DM Mono', monospace;
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--dark);
+    }
+
+    .bar-container {
+      width: 100px;
+      height: 8px;
+      background: #E2E8F0;
+      border-radius: 4px;
+      overflow: hidden;
+      display: inline-block;
+      vertical-align: middle;
+      margin-left: 12px;
+    }
+
+    .bar-fill {
+      height: 100%;
+      border-radius: 4px;
+      transition: width 1s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .bar-green {
+      background: #10B981;
+    }
+
+    .bar-blue {
+      background: #3B82F6;
+    }
+
+    .bar-gold {
+      background: #F59E0B;
+    }
+
+    .bar-red {
+      background: #EF4444;
+    }
+
+    .bar-teal {
+      background: #14B8A6;
+    }
+
+    /* GLASS TABLE */
+    .glass-table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0;
+      font-size: 14px;
+      margin-bottom: 32px;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    .glass-table th {
+      background: var(--surface2);
+      color: var(--text-muted);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      padding: 16px 20px;
+      text-align: left;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .glass-table td {
+      padding: 18px 20px;
+      border-bottom: 1px solid var(--border);
+      vertical-align: top;
+      background: white;
+    }
+
+    .glass-table tr:last-child td {
+      border-bottom: none;
+    }
+
+    .glass-table tr:hover td {
+      background: var(--surface2);
+    }
+
+    .glass-name {
+      font-weight: 700;
+      color: var(--dark);
+      margin-bottom: 4px;
+      font-size: 16px;
+    }
+
+    .glass-desc {
+      color: var(--text-muted);
+      font-size: 13px;
+    }
+
+    /* PILL TAGS */
+    .pill {
+      display: inline-block;
+      font-size: 12px;
+      padding: 4px 12px;
+      border-radius: 9999px;
+      margin: 3px;
+      font-weight: 600;
+      transition: all 0.2s;
+    }
+
+    .pill:hover {
+      transform: scale(1.05);
+    }
+
+    .pill-yes {
+      background: #DCFCE7;
+      color: #166534;
+      border: 1px solid #BBF7D0;
+    }
+
+    .pill-no {
+      background: #FEE2E2;
+      color: #B91C1C;
+      border: 1px solid #FECACA;
+    }
+
+    .pill-caution {
+      background: #FEF9C3;
+      color: #854D0E;
+      border: 1px solid #FDE68A;
+    }
+
+    .pill-blue {
+      background: #DBEAFE;
+      color: #1E40AF;
+      border: 1px solid #BFDBFE;
+    }
+
+    .pill-purple {
+      background: #F3E8FF;
+      color: #6B21A8;
+      border: 1px solid #E9D5FF;
+    }
+
+    /* INFO BOXES */
+    .info-box,
+    .warn-box,
+    .success-box {
+      border-radius: 12px;
+      padding: 20px 24px;
+      margin-bottom: 24px;
+      font-size: 15px;
+      line-height: 1.6;
+      display: flex;
+      gap: 16px;
+    }
+
+    .info-box {
+      background: #EFF6FF;
+      border: 1px solid #BEE3F8;
+      color: #2C5282;
+    }
+
+    .warn-box {
+      background: #FFFBEB;
+      border: 1px solid #FDE68A;
+      color: #92400E;
+    }
+
+    .success-box {
+      background: #F0FDF4;
+      border: 1px solid #BBF7D0;
+      color: #166534;
+    }
+
+    /* TERM GLOSSARY */
+    .term-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 20px;
+      margin-bottom: 32px;
+    }
+
+    .term-card {
+      background: #FFFFFF;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 24px;
+      transition: all 0.3s ease;
+    }
+
+    .term-card:hover {
+      border-color: var(--blue);
+      box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    }
+
+    .term-name {
+      font-family: 'DM Mono', monospace;
+      font-size: 14px;
+      font-weight: 700;
+      color: #B45309;
+      margin-bottom: 10px;
+      background: #FFFBEB;
+      display: inline-block;
+      padding: 2px 8px;
+      border-radius: 4px;
+    }
+
+    .term-def {
+      color: var(--text);
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    /* SALES SCRIPT */
+    .script-block {
+      background: #FFFFFF;
+      border-left: 4px solid var(--red);
+      border-radius: 0 12px 12px 0;
+      padding: 24px 32px;
+      margin-bottom: 24px;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    }
+
+    .script-tag {
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--red);
+      margin-bottom: 12px;
+    }
+
+    .script-text {
+      color: var(--dark);
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 1.7;
+      font-style: italic;
+    }
+
+    .script-tip {
+      margin-top: 16px;
+      font-size: 14px;
+      color: var(--text-muted);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    /* LEARNING PATH */
+    .path-step {
+      display: flex;
+      gap: 24px;
+      margin-bottom: 32px;
+      align-items: flex-start;
+    }
+
+    .step-num {
+      flex-shrink: 0;
+      width: 48px;
+      height: 48px;
+      background: var(--red);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 24px;
+      color: white;
+      box-shadow: 0 4px 12px rgba(211, 47, 47, 0.3);
+    }
+
+    .step-content h3 {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--dark);
+      margin: 0 0 8px 0 !important;
+    }
+
+    .step-content p {
+      color: var(--text-muted);
+      font-size: 15px;
+      margin: 0;
+    }
+
+    /* COMPARISON TABLE */
+    .compare-wrap {
+      overflow-x: auto;
+      margin-bottom: 32px;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    }
+
+    .compare-table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 850px;
+      font-size: 14px;
+      background: white;
+    }
+
+    .compare-table th {
+      padding: 20px 16px;
+      text-align: center;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      background: var(--surface2);
+      border-bottom: 2px solid var(--border);
+    }
+
+    .compare-table th:first-child {
+      text-align: left;
+    }
+
+    .compare-table td {
+      padding: 16px;
+      text-align: center;
+      border-bottom: 1px solid var(--border);
+      font-family: 'DM Mono', monospace;
+      font-size: 13px;
+      color: var(--dark);
+    }
+
+    .compare-table td:first-child {
+      text-align: left;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--dark);
+      background: var(--surface2);
+    }
+
+    .compare-table tr:hover td {
+      background: #F1F5F9 !important;
+    }
+
+    .val-high {
+      color: #059669;
+      font-weight: 700;
+    }
+
+    .val-mid {
+      color: #D97706;
+      font-weight: 700;
+    }
+
+    .val-low {
+      color: #DC2626;
+      font-weight: 700;
+    }
+
+    /* TIPS */
+    .tip-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 20px;
+      margin-bottom: 32px;
+    }
+
+    .tip-card {
+      background: #FFFFFF;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 24px;
+      transition: all 0.3s ease;
+    }
+
+    .tip-card:hover {
+      transform: translateY(-3px);
+      border-color: var(--teal);
+      box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    }
+
+    .tip-icon {
+      font-size: 32px;
+      margin-bottom: 16px;
+    }
+
+    .tip-card h4 {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--dark);
+      margin-bottom: 8px;
+    }
+
+    .tip-card p {
+      font-size: 14px;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    /* DIVIDER */
+    .divider {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 48px 0;
+    }
+
+    h2 {
+      font-size: 24px;
+      font-weight: 700;
+      color: var(--dark);
+      margin: 40px 0 16px;
+    }
+
+    h3 {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--dark);
+      margin: 24px 0 12px;
+    }
+
+    p {
+      margin-bottom: 16px;
+      color: var(--text);
+    }
+
+    ul {
+      padding-left: 24px;
+      margin-bottom: 16px;
+    }
+
+    li {
+      color: var(--text);
+      margin-bottom: 8px;
+      font-size: 15px;
+    }
+
+    strong {
+      color: var(--dark);
+      font-weight: 700;
+    }
+
+
+    /* ============ MOBILE RESPONSIVE ============ */
+    @media (max-width: 600px) {
+      .hero {
+        padding: 48px 24px;
+      }
+
+      .hero h1 {
+        font-size: 42px;
+        margin-bottom: 12px;
+      }
+
+      .hero p {
+        font-size: 15px;
+      }
+
+      .hero-logo {
+        display: none;
+      }
+
+      .tabs {
+        padding: 0 16px;
+        position: sticky;
+        top: 0;
+      }
+
+      .tab {
+        padding: 16px 16px;
+        font-size: 13px;
+      }
+
+      .content {
+        padding: 32px 20px;
+      }
+
+      .section-title {
+        font-size: 32px;
+      }
+
+      .section-sub {
+        font-size: 15px;
+        margin-bottom: 32px;
+      }
+
+      .card-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+      }
+
+      .term-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+      }
+
+      .tip-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+      }
+
+      .card {
+        padding: 24px;
+      }
+
+      .film-card-header {
+        padding: 20px;
+      }
+
+      .film-card-body {
+        padding: 16px 20px;
+      }
+
+      .stat-row {
+        flex-direction: row;
+        align-items: center;
+      }
+
+      .bar-container {
+        width: 60px;
+        margin-left: 8px;
+      }
+
+      .compare-wrap {
+        border-radius: 8px;
+      }
+
+      .glass-table {
+        display: block;
+        overflow-x: auto;
+        border-radius: 8px;
+      }
+
+      .path-step {
+        gap: 16px;
+      }
+
+      .step-num {
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+      }
+
+      .script-block {
+        padding: 20px;
+      }
+
+      .script-text {
+        font-size: 15px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .hero {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+      }
+
+      .hero p {
+        margin: 16px auto 0;
+      }
+
+      .glass-table th:nth-child(4),
+      .glass-table td:nth-child(4) {
+        display: none;
+      }
+    }
+
+    /* Custom Highlights */
+    .highlight {
+      color: var(--red);
+      font-weight: 700;
+    }
+
+    .tag-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 12px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HERO -->
+  <div class="hero">
+    <div>
+      <div class="hero-badge">3M AUTHORIZED LEARNING GUIDE</div>
+      <h1>WINDOW FILM<br><span>SALES MASTERY</span></h1>
+      <p>Your complete guide to 3M window film products, glass types, and how to become a confident 3M Window Film Sales
+        Agent — explained simply, no engineering degree needed.</p>
+    </div>
+    <div class="hero-logo">3M</div>
+  </div>
+
+  <!-- TABS -->
+  <div class="tabs">
+    <button class="tab active" onclick="showTab('basics')">📖 Basics & Terms</button>
+    <button class="tab" onclick="showTab('films')">🎞️ Film Products</button>
+    <button class="tab" onclick="showTab('glass')">🪟 Glass Types</button>
+    <button class="tab" onclick="showTab('compatibility')">✅ Compatibility</button>
+    <button class="tab" onclick="showTab('compare')">📊 Compare Films</button>
+    <button class="tab" onclick="showTab('sales')">💼 Sales Tips</button>
+    <button class="tab" onclick="showTab('learn')">🎯 Learning Path</button>
+  </div>
+
+  <!-- ========== TAB 1: BASICS ========== -->
+  <div id="basics" class="content active">
+    <div class="section-title">THE FUNDAMENTALS</div>
+    <p class="section-sub">Start here. Understand these key terms before anything else.</p>
+
+    <div class="info-box">
+      💡 <strong>Think of window film like sunglasses for your building or car.</strong> Just like sunglasses reduce
+      heat, glare, and UV rays for your eyes, window film does the same for glass — protecting people, furniture, and
+      interiors while saving energy.
+    </div>
+
+    <h2>Key Performance Terms — Explained Simply</h2>
+    <div class="term-grid">
+      <div class="term-card">
+        <div class="term-name">VLT — Visible Light Transmitted</div>
+        <div class="term-def">How much light you can <strong>see through</strong> the film. A 70% VLT film is nearly
+          clear. A 5% VLT film is very dark (like limo tint). Higher % = brighter inside.</div>
+      </div>
+      <div class="term-card">
+        <div class="term-name">UV Block</div>
+        <div class="term-def">How much <strong>ultraviolet radiation</strong> is stopped. UV causes fading of furniture,
+          carpets, and skin damage. Most 3M films block 99–99.9% of UV rays.</div>
+      </div>
+      <div class="term-card">
+        <div class="term-name">SHGC / G-Value</div>
+        <div class="term-def"><strong>Solar Heat Gain Coefficient</strong> — how much heat from the sun passes through.
+          Lower = better heat blocking. 0.20 means 80% of heat is blocked. 0.80 means 80% passes through.</div>
+      </div>
+      <div class="term-card">
+        <div class="term-name">TSER — Total Solar Energy Rejected</div>
+        <div class="term-def">The <strong>total % of solar energy</strong> (heat + light + UV) blocked by the film.
+          Higher = better performance. 70% TSER = very effective heat shield.</div>
+      </div>
+      <div class="term-card">
+        <div class="term-name">IRR — Infrared Rejection</div>
+        <div class="term-def">How much <strong>infrared heat</strong> (the invisible heat you feel from sun) is blocked.
+          High IRR = the room feels cooler even when it looks bright. Key selling point of premium films.</div>
+      </div>
+      <div class="term-card">
+        <div class="term-name">U-Value</div>
+        <div class="term-def">How well a window <strong>retains heat in winter</strong>. Lower U-Value = better
+          insulation. Important for cold climates. The All Season series specializes in this.</div>
+      </div>
+      <div class="term-card">
+        <div class="term-name">Glare Reduction</div>
+        <div class="term-def">% reduction of annoying <strong>glare from sunlight</strong>. Important for offices, homes
+          near water, or anywhere screens are used. 80%+ glare reduction is excellent.</div>
+      </div>
+      <div class="term-card">
+        <div class="term-name">Shading Coefficient (SC)</div>
+        <div class="term-def">Old method of measuring heat gain. <strong>Lower is better.</strong> Modern specs use
+          SHGC. If SC = 0.33, that film blocks 67% of solar heat vs. plain glass.</div>
+      </div>
+      <div class="term-card">
+        <div class="term-name">Reflectivity (Interior/Exterior)</div>
+        <div class="term-def">How <strong>mirror-like</strong> the film looks from inside or outside. High reflectivity
+          = more privacy in daytime but mirror effect at night. Low reflectivity = looks like normal glass.</div>
+      </div>
+      <div class="term-card">
+        <div class="term-name">IPA Sealant</div>
+        <div class="term-def">3M™ Impact Protection Attachment Sealant — <strong>glue applied around frame
+            edges</strong> for security/safety films. Required for blast, hurricane, and break-in protection.</div>
+      </div>
+      <div class="term-card">
+        <div class="term-name">Mils (Film Thickness)</div>
+        <div class="term-def">1 mil = 0.001 inch. <strong>Thicker = more protection.</strong> Sun control films: 1.5–2.5
+          mils. Safety films: 8–14 mils. Thicker films are harder to break through.</div>
+      </div>
+      <div class="term-card">
+        <div class="term-name">Metallized vs Non-Metal Film</div>
+        <div class="term-def"><strong>Metallized</strong> films: contain metal layers, high reflectivity, can block
+          signals. <strong>Non-metal</strong> films (like Prestige, Crystalline): no signal interference, no corrosion
+          risk, clearer look.</div>
+      </div>
+    </div>
+
+    <hr class="divider">
+
+    <h2>The 3 Big Things Window Film Does</h2>
+    <div class="card-grid">
+      <div class="card">
+        <div style="font-size:32px;margin-bottom:12px">☀️</div>
+        <h3>1. Sun Control</h3>
+        <p>Blocks heat, UV, and glare. Keeps rooms cooler, protects furniture from fading, and reduces air conditioning
+          costs. This is the most common application.</p>
+        <div class="tag-row">
+          <span class="pill pill-blue">Prestige Series</span>
+          <span class="pill pill-blue">Night Vision</span>
+          <span class="pill pill-blue">All Season</span>
+          <span class="pill pill-blue">Crystalline</span>
+        </div>
+      </div>
+      <div class="card">
+        <div style="font-size:32px;margin-bottom:12px">🛡️</div>
+        <h3>2. Safety & Security</h3>
+        <p>Holds glass together when broken. Protects against break-ins, explosions, earthquakes, and accidents. The
+          film acts like an invisible net holding glass shards.</p>
+        <div class="tag-row">
+          <span class="pill pill-caution">Scotchshield Ultra S800</span>
+          <span class="pill pill-caution">Safety S140</span>
+          <span class="pill pill-caution">Ultra Prestige S50</span>
+        </div>
+      </div>
+      <div class="card">
+        <div style="font-size:32px;margin-bottom:12px">❄️</div>
+        <h3>3. Energy Efficiency</h3>
+        <p>Reduces heating and cooling costs year-round. In summer: blocks heat. In winter: retains warmth. This is
+          especially valuable for large commercial buildings.</p>
+        <div class="tag-row">
+          <span class="pill pill-yes">All Season Low E</span>
+          <span class="pill pill-yes">Prestige 70</span>
+          <span class="pill pill-yes">Crystalline 90</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="warn-box">
+      ⚠️ <strong>Important Reminder for Sales:</strong> 3M window films are <strong>NOT bulletproof</strong> and are
+      <strong>NOT designed to stop intruders</strong> — they slow them down and protect from glass shards. Always be
+      honest with customers about what the film can and cannot do.
+    </div>
+  </div>
+
+  <!-- ========== TAB 2: FILM PRODUCTS ========== -->
+  <div id="films" class="content">
+    <div class="section-title">3M FILM PRODUCT LINEUP</div>
+    <p class="section-sub">All major 3M window film series — what they are, who they're for, and their key specs.</p>
+
+    <h2>🏙️ Architectural / Building Films</h2>
+    <div class="card-grid">
+
+      <div class="film-card">
+        <div class="film-card-header">
+          <span class="film-type-badge badge-solar">Architectural</span>
+          <div class="film-series">Prestige Series</div>
+          <div class="film-desc">Non-metal, high clarity sun control. Premium choice for buildings where aesthetics
+            matter. Uses patented multilayer nano-technology.</div>
+        </div>
+        <div class="film-card-body">
+          <div class="stat-row"><span class="stat-label">Models</span><span class="stat-value"
+              style="color:var(--teal)">PR20 → PR70</span></div>
+          <div class="stat-row"><span class="stat-label">UV Block</span><span class="stat-value">99.9% <span
+                class="bar-container"><span class="bar-fill bar-green" style="width:99%"></span></span></span></div>
+          <div class="stat-row"><span class="stat-label">Best TSER</span><span class="stat-value">62% (PR20) <span
+                class="bar-container"><span class="bar-fill bar-blue" style="width:62%"></span></span></span></div>
+          <div class="stat-row"><span class="stat-label">VLT Range</span><span class="stat-value">21% – 69%</span></div>
+          <div class="stat-row"><span class="stat-label">Metal?</span><span class="stat-value"
+              style="color:var(--green)">❌ No Metal</span></div>
+          <div class="stat-row"><span class="stat-label">Signal Safe?</span><span class="stat-value"
+              style="color:var(--green)">✅ Yes</span></div>
+          <div class="stat-row"><span class="stat-label">Best For</span><span class="stat-value"
+              style="color:var(--gold)">Heat + Clarity</span></div>
+        </div>
+      </div>
+
+      <div class="film-card">
+        <div class="film-card-header">
+          <span class="film-type-badge badge-solar">Architectural</span>
+          <div class="film-series">Night Vision Series</div>
+          <div class="film-desc">Warm-tone film with low interior reflectivity. You can see outside clearly even at
+            night. Great for homes and offices with nice views.</div>
+        </div>
+        <div class="film-card-body">
+          <div class="stat-row"><span class="stat-label">Models</span><span class="stat-value"
+              style="color:var(--teal)">NV15, NV25, NV35</span></div>
+          <div class="stat-row"><span class="stat-label">UV Block</span><span class="stat-value">99.9% <span
+                class="bar-container"><span class="bar-fill bar-green" style="width:99%"></span></span></span></div>
+          <div class="stat-row"><span class="stat-label">TSER (single pane)</span><span class="stat-value">72% <span
+                class="bar-container"><span class="bar-fill bar-blue" style="width:72%"></span></span></span></div>
+          <div class="stat-row"><span class="stat-label">VLT Range</span><span class="stat-value">13% – 33%</span></div>
+          <div class="stat-row"><span class="stat-label">Interior Reflect</span><span class="stat-value"
+              style="color:var(--green)">Low (7–9%)</span></div>
+          <div class="stat-row"><span class="stat-label">Glare Reduction</span><span class="stat-value">85% <span
+                class="bar-container"><span class="bar-fill bar-gold" style="width:85%"></span></span></span></div>
+          <div class="stat-row"><span class="stat-label">Best For</span><span class="stat-value"
+              style="color:var(--gold)">Views + Privacy</span></div>
+        </div>
+      </div>
+
+      <div class="film-card">
+        <div class="film-card-header">
+          <span class="film-type-badge badge-solar">Architectural</span>
+          <div class="film-series">All Season (Low E)</div>
+          <div class="film-desc">Works in BOTH summer (blocks heat) and winter (retains warmth). The only 3M film
+            designed for year-round energy savings.</div>
+        </div>
+        <div class="film-card-body">
+          <div class="stat-row"><span class="stat-label">Models</span><span class="stat-value"
+              style="color:var(--teal)">LE20, LE35, LE70</span></div>
+          <div class="stat-row"><span class="stat-label">UV Block</span><span class="stat-value">99–99.9% <span
+                class="bar-container"><span class="bar-fill bar-green" style="width:99%"></span></span></span></div>
+          <div class="stat-row"><span class="stat-label">TSER (LE20)</span><span class="stat-value">76% <span
+                class="bar-container"><span class="bar-fill bar-blue" style="width:76%"></span></span></span></div>
+          <div class="stat-row"><span class="stat-label">VLT Range</span><span class="stat-value">20% – 74%</span></div>
+          <div class="stat-row"><span class="stat-label">Winter Insulation</span><span class="stat-value"
+              style="color:var(--green)">⭐⭐⭐</span></div>
+          <div class="stat-row"><span class="stat-label">U Value</span><span class="stat-value">0.77–0.84</span></div>
+          <div class="stat-row"><span class="stat-label">Best For</span><span class="stat-value"
+              style="color:var(--gold)">4-Season Climates</span></div>
+        </div>
+      </div>
+
+      <div class="film-card">
+        <div class="film-card-header">
+          <span class="film-type-badge badge-solar">Architectural</span>
+          <div class="film-series">Neutral 35</div>
+          <div class="film-desc">Classic metallized solar control film for interior application on flat glass. Simple,
+            reliable, and cost-effective.</div>
+        </div>
+        <div class="film-card-body">
+          <div class="stat-row"><span class="stat-label">Model</span><span class="stat-value"
+              style="color:var(--teal)">Neutral 35</span></div>
+          <div class="stat-row"><span class="stat-label">UV Block</span><span class="stat-value">99% <span
+                class="bar-container"><span class="bar-fill bar-green" style="width:99%"></span></span></span></div>
+          <div class="stat-row"><span class="stat-label">TSER (clear glass)</span><span class="stat-value">56% <span
+                class="bar-container"><span class="bar-fill bar-blue" style="width:56%"></span></span></span></div>
+          <div class="stat-row"><span class="stat-label">VLT</span><span class="stat-value">36%</span></div>
+          <div class="stat-row"><span class="stat-label">Heat Gain Reduction</span><span class="stat-value">46% <span
+                class="bar-container"><span class="bar-fill bar-gold" style="width:46%"></span></span></span></div>
+          <div class="stat-row"><span class="stat-label">Metal?</span><span class="stat-value"
+              style="color:var(--gold)">✅ Metallized</span></div>
+          <div class="stat-row"><span class="stat-label">Best For</span><span class="stat-value"
+              style="color:var(--gold)">Budget-Friendly Solar</span></div>
+        </div>
+      </div>
+
+      <div class="film-card">
+        <div class="film-card-header">
+          <span class="film-type-badge badge-solar">Architectural · Exterior</span>
+          <div class="film-series">Silver 15 Exterior</div>
+          <div class="film-desc">Applied to OUTSIDE of glass. Very high reflectivity, maximum heat rejection. Used when
+            interior application isn't possible.</div>
+        </div>
+        <div class="film-card-body">
+          <div class="stat-row"><span class="stat-label">UV Block</span><span class="stat-value">99% <span
+                class="bar-container"><span class="bar-fill bar-green" style="width:99%"></span></span></span></div>
+          <div class="stat-row"><span class="stat-label">TSER (single)</span><span class="stat-value">81% <span
+                class="bar-container"><span class="bar-fill bar-blue" style="width:81%"></span></span></span></div>
+          <div class="stat-row"><span class="stat-label">VLT</span><span class="stat-value">17%</span></div>
+          <div class="stat-row"><span class="stat-label">Exterior Reflect</span><span class="stat-value"
+              style="color:var(--red)">61% (mirror)</span></div>
+          <div class="stat-row"><span class="stat-label">Solar Heat Reduction</span><span class="stat-value">77% <span
+                class="bar-container"><span class="bar-fill bar-gold" style="width:77%"></span></span></span></div>
+          <div class="stat-row"><span class="stat-label">Application</span><span class="stat-value"
+              style="color:var(--gold)">Exterior Only</span></div>
+          <div class="stat-row"><span class="stat-label">Best For</span><span class="stat-value"
+              style="color:var(--gold)">Max Heat Block</span></div>
+        </div>
+      </div>
+
+    </div>
+
+    <hr class="divider">
+    <h2>🚗 Automotive Films</h2>
+    <div class="card-grid">
+
+      <div class="film-card">
+        <div class="film-card-header">
+          <span class="film-type-badge badge-auto">Automotive</span>
+          <div class="film-series">Crystalline Series</div>
+          <div class="film-desc">3M's BEST automotive film. Uses 200+ nano layers. Lightest color, highest performance.
+            Looks almost clear but blocks massive heat and IR. 5G compatible.</div>
+        </div>
+        <div class="film-card-body">
+          <div class="stat-row"><span class="stat-label">Models</span><span class="stat-value"
+              style="color:var(--teal)">CR20 → CR90</span></div>
+          <div class="stat-row"><span class="stat-label">UV Block</span><span class="stat-value">99.9% <span
+                class="bar-container"><span class="bar-fill bar-green" style="width:99%"></span></span></span></div>
+          <div class="stat-row"><span class="stat-label">IRR (infrared)</span><span class="stat-value">95–99% <span
+                class="bar-container"><span class="bar-fill bar-blue" style="width:97%"></span></span></span></div>
+          <div class="stat-row"><span class="stat-label">TSER (CR70)</span><span class="stat-value">50% <span
+                class="bar-container"><span class="bar-fill bar-teal" style="width:50%"></span></span></span></div>
+          <div class="stat-row"><span class="stat-label">Metal?</span><span class="stat-value"
+              style="color:var(--green)">❌ No Metal</span></div>
+          <div class="stat-row"><span class="stat-label">Signal Safe?</span><span class="stat-value"
+              style="color:var(--green)">✅ Yes</span></div>
+          <div class="stat-row"><span class="stat-label">Price Level</span><span class="stat-value"
+              style="color:var(--red)">Premium 💎</span></div>
+        </div>
+      </div>
+
+      <div class="film-card">
+        <div class="film-card-header">
+          <span class="film-type-badge badge-auto">Automotive</span>
+          <div class="film-series">Ceramic IR Series</div>
+          <div class="film-desc">Ceramic technology. Metal-free, excellent heat blocking, no signal interference. Great
+            mid-to-premium option between FX HP and Crystalline.</div>
+        </div>
+        <div class="film-card-body">
+          <div class="stat-row"><span class="stat-label">Models</span><span class="stat-value"
+              style="color:var(--teal)">CIR5 → CIR70</span></div>
+          <div class="stat-row"><span class="stat-label">UV Block</span><span class="stat-value">99.6–99.9% <span
+                class="bar-container"><span class="bar-fill bar-green" style="width:99%"></span></span></span></div>
+          <div class="stat-row"><span class="stat-label">IRR (infrared)</span><span class="stat-value">78–95% <span
+                class="bar-container"><span class="bar-fill bar-blue" style="width:87%"></span></span></span></div>
+          <div class="stat-row"><span class="stat-label">TSER (CIR15)</span><span class="stat-value">63% <span
+                class="bar-container"><span class="bar-fill bar-teal" style="width:63%"></span></span></span></div>
+          <div class="stat-row"><span class="stat-label">Metal?</span><span class="stat-value"
+              style="color:var(--green)">❌ No Metal</span></div>
+          <div class="stat-row"><span class="stat-label">Signal Safe?</span><span class="stat-value"
+              style="color:var(--green)">✅ Yes</span></div>
+          <div class="stat-row"><span class="stat-label">Price Level</span><span class="stat-value"
+              style="color:var(--gold)">Mid-Premium 🥇</span></div>
+        </div>
+      </div>
+
+      <div class="film-card">
+        <div class="film-card-header">
+          <span class="film-type-badge badge-auto">Automotive</span>
+          <div class="film-series">FX HP Series</div>
+          <div class="film-desc">Entry-level 3M auto film. Great for privacy, UV protection, and basic heat reduction.
+            Popular in fleet and budget-conscious customers.</div>
+        </div>
+        <div class="film-card-body">
+          <div class="stat-row"><span class="stat-label">Models</span><span class="stat-value"
+              style="color:var(--teal)">FXHP5 → FXHP50</span></div>
+          <div class="stat-row"><span class="stat-label">UV Block</span><span class="stat-value">99% <span
+                class="bar-container"><span class="bar-fill bar-green" style="width:99%"></span></span></span></div>
+          <div class="stat-row"><span class="stat-label">IRR (infrared)</span><span class="stat-value">35–43% <span
+                class="bar-container"><span class="bar-fill bar-blue" style="width:40%"></span></span></span></div>
+          <div class="stat-row"><span class="stat-label">TSER (FX20)</span><span class="stat-value">61% <span
+                class="bar-container"><span class="bar-fill bar-teal" style="width:61%"></span></span></span></div>
+          <div class="stat-row"><span class="stat-label">Privacy</span><span class="stat-value"
+              style="color:var(--green)">Excellent</span></div>
+          <div class="stat-row"><span class="stat-label">Glare Reduction</span><span class="stat-value">45–97%</span>
+          </div>
+          <div class="stat-row"><span class="stat-label">Price Level</span><span class="stat-value"
+              style="color:var(--blue)">Entry Level 🎯</span></div>
+        </div>
+      </div>
+
+    </div>
+
+    <hr class="divider">
+    <h2>🛡️ Safety & Security Films</h2>
+    <div class="card-grid">
+      <div class="film-card">
+        <div class="film-card-header">
+          <span class="film-type-badge badge-safety">Safety + Solar</span>
+          <div class="film-series">Scotchshield Ultra Prestige S50</div>
+          <div class="film-desc">Dual purpose: security + sun control. Holds glass together AND blocks heat. No metals.
+            8-mil thick. Perfect for commercial buildings wanting both safety and comfort.</div>
+        </div>
+        <div class="film-card-body">
+          <div class="stat-row"><span class="stat-label">Thickness</span><span class="stat-value">8 mil (0.008")</span>
+          </div>
+          <div class="stat-row"><span class="stat-label">UV Block</span><span class="stat-value">&lt;0.5% pass <span
+                class="bar-container"><span class="bar-fill bar-green" style="width:99%"></span></span></span></div>
+          <div class="stat-row"><span class="stat-label">VLT</span><span class="stat-value">49%</span></div>
+          <div class="stat-row"><span class="stat-label">TSER</span><span class="stat-value">56% <span
+                class="bar-container"><span class="bar-fill bar-blue" style="width:56%"></span></span></span></div>
+          <div class="stat-row"><span class="stat-label">SHGC</span><span class="stat-value">0.44</span></div>
+          <div class="stat-row"><span class="stat-label">Metal?</span><span class="stat-value"
+              style="color:var(--green)">❌ No Metal</span></div>
+          <div class="stat-row"><span class="stat-label">IPA Required?</span><span class="stat-value"
+              style="color:var(--gold)">⚠️ Some uses</span></div>
+        </div>
+      </div>
+
+      <div class="film-card">
+        <div class="film-card-header">
+          <span class="film-type-badge badge-safety">Safety — Max Strength</span>
+          <div class="film-series">Scotchshield Ultra S800</div>
+          <div class="film-desc">Clear safety film — no sun control, just pure glass protection. Strongest blast
+            resistance. Used in government buildings, schools, banks. Optically clear (88% VLT).</div>
+        </div>
+        <div class="film-card-body">
+          <div class="stat-row"><span class="stat-label">Thickness</span><span class="stat-value">8 mil</span></div>
+          <div class="stat-row"><span class="stat-label">UV Block</span><span class="stat-value">&lt;1% pass <span
+                class="bar-container"><span class="bar-fill bar-green" style="width:99%"></span></span></span></div>
+          <div class="stat-row"><span class="stat-label">VLT</span><span class="stat-value">88% (nearly clear)</span>
+          </div>
+          <div class="stat-row"><span class="stat-label">Blast Rating</span><span class="stat-value"
+              style="color:var(--green)">GSA "2" — No Hazard</span></div>
+          <div class="stat-row"><span class="stat-label">Break Strength</span><span class="stat-value">265 lbs/in</span>
+          </div>
+          <div class="stat-row"><span class="stat-label">Best For</span><span class="stat-value"
+              style="color:var(--gold)">Security, No Tint</span></div>
+        </div>
+      </div>
+
+      <div class="film-card">
+        <div class="film-card-header">
+          <span class="film-type-badge badge-safety">Safety — Thick</span>
+          <div class="film-series">Safety S140</div>
+          <div class="film-desc">14-mil thick (almost double other safety films). Multi-layer construction. Maximum
+            impact resistance for high-security situations. Very clear appearance.</div>
+        </div>
+        <div class="film-card-body">
+          <div class="stat-row"><span class="stat-label">Thickness</span><span class="stat-value"
+              style="color:var(--red)">14 mil — Thickest</span></div>
+          <div class="stat-row"><span class="stat-label">UV Block</span><span class="stat-value">99% <span
+                class="bar-container"><span class="bar-fill bar-green" style="width:99%"></span></span></span></div>
+          <div class="stat-row"><span class="stat-label">VLT</span><span class="stat-value">85%</span></div>
+          <div class="stat-row"><span class="stat-label">Break Strength</span><span class="stat-value">350 lbs/in</span>
+          </div>
+          <div class="stat-row"><span class="stat-label">ANSI Rating</span><span class="stat-value"
+              style="color:var(--green)">Class A 400 ft-lbs</span></div>
+          <div class="stat-row"><span class="stat-label">Best For</span><span class="stat-value"
+              style="color:var(--gold)">Max Shatter Resist</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========== TAB 3: GLASS TYPES ========== -->
+  <div id="glass" class="content">
+    <div class="section-title">14 GLASS TYPES</div>
+    <p class="section-sub">Understanding glass is as important as knowing your film. Here's every type of glass,
+      explained simply.</p>
+
+    <div class="info-box">
+      💡 <strong>Key Rule:</strong> Not all glass types can safely have window film applied. Tempered and
+      heat-strengthened glass handle film well. Clear annealed glass is the easiest. Some specialty glasses need special
+      consideration.
+    </div>
+
+    <div class="compare-wrap">
+      <table class="glass-table">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Glass Type</th>
+            <th>What It Is</th>
+            <th>Where Used</th>
+            <th>Film Safe?</th>
+            <th>Key Note for Sales</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="stat-value">01</td>
+            <td>
+              <div class="glass-name">Float Glass</div>
+              <div class="glass-desc">(Annealed/Clear)</div>
+            </td>
+            <td>Standard clear glass made by floating molten glass on tin. Most common glass.</td>
+            <td>Homes, offices, storefronts</td>
+            <td><span class="pill pill-yes">✅ Yes</span><br><span class="pill pill-yes">Easiest</span></td>
+            <td>No restrictions. Any 3M film works. Watch for thermal stress on darker films in direct sun.</td>
+          </tr>
+          <tr>
+            <td class="stat-value">02</td>
+            <td>
+              <div class="glass-name">Heat-Strengthened Glass</div>
+              <div class="glass-desc">(HS Glass)</div>
+            </td>
+            <td>Float glass heated then cooled more slowly than tempered. 2&times; stronger than annealed.</td>
+            <td>Commercial curtain walls, skylights</td>
+            <td><span class="pill pill-yes">✅ Yes</span></td>
+            <td>Handles more heat stress than annealed. Good for darker films. Breaks in large pieces (not safe like
+              tempered).</td>
+          </tr>
+          <tr>
+            <td class="stat-value">03</td>
+            <td>
+              <div class="glass-name">Tempered Glass</div>
+              <div class="glass-desc">(Toughened)</div>
+            </td>
+            <td>Heat-treated to be 4&ndash;5&times; stronger than float. Shatters into small safe pieces.</td>
+            <td>Car windows, shower doors, phone screens</td>
+            <td><span class="pill pill-yes">✅ Yes</span><br><span class="pill pill-caution">IPA needed*</span></td>
+            <td>Most common auto glass. Film works great. For safety film on single-pane tempered: <strong>IPA Sealant
+                required</strong>.</td>
+          </tr>
+          <tr>
+            <td class="stat-value">04</td>
+            <td>
+              <div class="glass-name">Laminated Glass</div>
+            </td>
+            <td>Two+ glass layers bonded with PVB plastic interlayer. Holds together when broken (like car windshield).
+            </td>
+            <td>Windshields, skylights, hurricane zones</td>
+            <td><span class="pill pill-yes">✅ Yes</span></td>
+            <td>Film adds extra protection on top. UV already partially blocked by interlayer. Most car front
+              windshields are laminated &mdash; film rarely applied to these.</td>
+          </tr>
+          <tr>
+            <td class="stat-value">05</td>
+            <td>
+              <div class="glass-name">Low-E Glass</div>
+              <div class="glass-desc">(Low Emissivity)</div>
+            </td>
+            <td>Has invisible metallic coating to reflect heat. Keeps heat inside in winter, outside in summer.</td>
+            <td>Modern double-pane windows, energy-efficient buildings</td>
+            <td><span class="pill pill-caution">⚠️ Caution</span></td>
+            <td><strong>Must do Glass Stress Analysis first!</strong> Adding film may create thermal stress. Lighter
+              films (higher VLT) are safer. Always check 3M's compatibility guidelines.</td>
+          </tr>
+          <tr>
+            <td class="stat-value">06</td>
+            <td>
+              <div class="glass-name">Tinted Glass</div>
+              <div class="glass-desc">(Body-Tinted)</div>
+            </td>
+            <td>Color added to the glass itself during manufacturing (bronze, grey, green, blue).</td>
+            <td>Commercial buildings, car factory glass</td>
+            <td><span class="pill pill-caution">⚠️ Caution</span></td>
+            <td>Absorbs heat already &mdash; adding dark film increases absorption &rarr; thermal stress risk. Use
+              lighter films. Always do stress analysis.</td>
+          </tr>
+          <tr>
+            <td class="stat-value">07</td>
+            <td>
+              <div class="glass-name">Frosted Glass</div>
+              <div class="glass-desc">(Acid-Etched/Sandblasted)</div>
+            </td>
+            <td>Surface treated to be opaque/translucent. Provides privacy while letting light through.</td>
+            <td>Bathrooms, offices, partitions</td>
+            <td><span class="pill pill-caution">⚠️ Limited</span></td>
+            <td>Surface texture means adhesion may be uneven. Safety film can be applied to smooth side. Decorative
+              frosted films can enhance or replace existing frosting.</td>
+          </tr>
+          <tr>
+            <td class="stat-value">08</td>
+            <td>
+              <div class="glass-name">Patterned Glass</div>
+              <div class="glass-desc">(Obscure/Textured)</div>
+            </td>
+            <td>Has surface pattern/texture rolled in during manufacturing.</td>
+            <td>Decorative windows, privacy applications</td>
+            <td><span class="pill pill-no">❌ Usually No</span></td>
+            <td>Textured surface doesn't allow proper adhesion. Film bubbles/peels. Not recommended in most cases.</td>
+          </tr>
+          <tr>
+            <td class="stat-value">09</td>
+            <td>
+              <div class="glass-name">Wired Glass</div>
+              <div class="glass-desc">(Fire-Rated)</div>
+            </td>
+            <td>Glass with embedded wire mesh. Old fire-rated glass (now being replaced).</td>
+            <td>Older schools, fire doors</td>
+            <td><span class="pill pill-no">❌ Not Recommended</span></td>
+            <td>Wire interrupts light and adhesion. May affect fire rating. Consult 3M before any application. Usually
+              replaced with laminated safety glass today.</td>
+          </tr>
+          <tr>
+            <td class="stat-value">10</td>
+            <td>
+              <div class="glass-name">Self-Cleaning Glass</div>
+            </td>
+            <td>Special coating breaks down dirt with UV light; rain washes it away.</td>
+            <td>High-rise buildings, hard-to-clean windows</td>
+            <td><span class="pill pill-no">❌ Not Recommended</span></td>
+            <td>Film covers the self-cleaning coating, making it useless. The film's adhesive may not bond properly.
+              Avoid unless customer accepts losing self-cleaning feature.</td>
+          </tr>
+          <tr>
+            <td class="stat-value">11</td>
+            <td>
+              <div class="glass-name">Smart Glass</div>
+              <div class="glass-desc">(Electrochromic/PDLC)</div>
+            </td>
+            <td>Changes transparency with electricity. Switchable privacy/clear glass.</td>
+            <td>Luxury offices, hospitals, conference rooms</td>
+            <td><span class="pill pill-no">❌ No</span></td>
+            <td>Film can interfere with the electrical system. These windows already have built-in tinting technology.
+              Not compatible with standard window film.</td>
+          </tr>
+          <tr>
+            <td class="stat-value">12</td>
+            <td>
+              <div class="glass-name">Insulated Glass Unit</div>
+              <div class="glass-desc">(IGU / Double/Triple Pane)</div>
+            </td>
+            <td>Two or three panes with air or argon gas gap for insulation.</td>
+            <td>Modern homes, commercial buildings &mdash; most common today</td>
+            <td><span class="pill pill-yes">✅ Yes</span><br><span class="pill pill-caution">Check stress</span></td>
+            <td>Apply to interior face only. Film on inner pane can cause thermal stress on outer pane. Lighter films
+              safer. 3M data sheets show double-pane specs separately.</td>
+          </tr>
+          <tr>
+            <td class="stat-value">13</td>
+            <td>
+              <div class="glass-name">Solar Control Glass</div>
+            </td>
+            <td>Factory-coated glass with built-in solar control properties (similar to Low-E).</td>
+            <td>Modern commercial construction</td>
+            <td><span class="pill pill-caution">⚠️ Analysis Needed</span></td>
+            <td>Similar to Low-E cautions. Adding more solar control film may create overheating on glass edges. Light
+              films preferred. Always perform glass stress analysis.</td>
+          </tr>
+          <tr>
+            <td class="stat-value">14</td>
+            <td>
+              <div class="glass-name">Acoustic Glass</div>
+              <div class="glass-desc">(Sound Control)</div>
+            </td>
+            <td>Laminated glass with special acoustic interlayer to reduce sound transmission.</td>
+            <td>Airports, recording studios, city buildings</td>
+            <td><span class="pill pill-yes">✅ Yes</span></td>
+            <td>Film applies to glass surface just like laminated glass. No interference with acoustic properties. Great
+              opportunity to add UV/heat protection to existing acoustic windows.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="success-box">
+      ✅ <strong>Best Glass for Film Sales (Easy Wins):</strong> Float/Clear Annealed (#1), Tempered (#3), Laminated
+      (#4), Insulated/Double-Pane (#12), and Acoustic (#14) are your most common and easiest customers.
+    </div>
+    <div class="warn-box">
+      ⚠️ <strong>Always Check Before Installing:</strong> For Low-E (#5), Tinted (#6), Solar Control (#13), and
+      Insulated (#12) glass — always recommend a Glass Stress Analysis. 3M authorized dealers can provide this to ensure
+      the film won't cause thermal cracking.
+    </div>
+  </div>
+
+  <!-- ========== TAB 4: COMPATIBILITY ========== -->
+  <div id="compatibility" class="content">
+    <div class="section-title">FILM + GLASS COMPATIBILITY</div>
+    <p class="section-sub">Which film works on which glass, and what performance can your customer expect?</p>
+
+    <h2>✅ Can I Install Film? Quick Decision Chart</h2>
+    <div class="compare-wrap">
+      <table class="compare-table">
+        <thead>
+          <tr>
+            <th>Glass Type</th>
+            <th>Solar/Sun Control Film</th>
+            <th>Safety Film</th>
+            <th>Auto Film</th>
+            <th>Exterior Film</th>
+            <th>Risk Level</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="stat-value">01</td>
+            <td>1. Float (Clear Annealed)</td>
+            <td class="val-high">✅ All types</td>
+            <td class="val-high">✅ All types</td>
+            <td class="val-high">✅ All types</td>
+            <td class="val-high">✅ Yes</td>
+            <td style="color:var(--green)">Low ✅</td>
+          </tr>
+          <tr>
+            <td class="stat-value">02</td>
+            <td>2. Heat-Strengthened (HS)</td>
+            <td class="val-high">✅ All types</td>
+            <td class="val-high">✅ Yes</td>
+            <td>N/A</td>
+            <td class="val-high">✅ Yes</td>
+            <td style="color:var(--green)">Low ✅</td>
+          </tr>
+          <tr>
+            <td class="stat-value">03</td>
+            <td>3. Tempered</td>
+            <td class="val-high">✅ All types</td>
+            <td class="val-mid">⚠️ IPA needed</td>
+            <td class="val-high">✅ Best option</td>
+            <td class="val-high">✅ Yes</td>
+            <td style="color:var(--green)">Low ✅</td>
+          </tr>
+          <tr>
+            <td class="stat-value">04</td>
+            <td>4. Laminated</td>
+            <td class="val-high">✅ Yes</td>
+            <td class="val-high">✅ Yes</td>
+            <td class="val-mid">⚠️ Rear only</td>
+            <td class="val-mid">⚠️ Check</td>
+            <td style="color:var(--green)">Low ✅</td>
+          </tr>
+          <tr>
+            <td class="stat-value">05</td>
+            <td>5. Low-E Glass</td>
+            <td class="val-mid">⚠️ Light films only</td>
+            <td class="val-mid">⚠️ Stress analysis</td>
+            <td>N/A</td>
+            <td class="val-low">❌ Usually no</td>
+            <td style="color:var(--gold)">Medium ⚠️</td>
+          </tr>
+          <tr>
+            <td class="stat-value">06</td>
+            <td>6. Tinted/Body-Tinted</td>
+            <td class="val-mid">⚠️ Lighter films</td>
+            <td class="val-mid">⚠️ Stress analysis</td>
+            <td class="val-mid">⚠️ Factory tint exists</td>
+            <td class="val-low">❌ Caution</td>
+            <td style="color:var(--gold)">Medium ⚠️</td>
+          </tr>
+          <tr>
+            <td>7. Frosted</td>
+            <td class="val-low">❌ Limited</td>
+            <td class="val-mid">⚠️ Smooth side only</td>
+            <td>N/A</td>
+            <td class="val-low">❌ No</td>
+            <td style="color:var(--gold)">Medium ⚠️</td>
+          </tr>
+          <tr>
+            <td>8. Patterned</td>
+            <td class="val-low">❌ No</td>
+            <td class="val-low">❌ No</td>
+            <td>N/A</td>
+            <td class="val-low">❌ No</td>
+            <td style="color:var(--red)">High ❌</td>
+          </tr>
+          <tr>
+            <td>9. Wired Glass</td>
+            <td class="val-low">❌ Not recommended</td>
+            <td class="val-low">❌ Not recommended</td>
+            <td>N/A</td>
+            <td class="val-low">❌ No</td>
+            <td style="color:var(--red)">High ❌</td>
+          </tr>
+          <tr>
+            <td>10. Self-Cleaning</td>
+            <td class="val-low">❌ No</td>
+            <td class="val-low">❌ No</td>
+            <td>N/A</td>
+            <td class="val-low">❌ No</td>
+            <td style="color:var(--red)">High ❌</td>
+          </tr>
+          <tr>
+            <td>11. Smart Glass</td>
+            <td class="val-low">❌ No</td>
+            <td class="val-low">❌ No</td>
+            <td>N/A</td>
+            <td class="val-low">❌ No</td>
+            <td style="color:var(--red)">High ❌</td>
+          </tr>
+          <tr>
+            <td>12. Insulated/Double Pane</td>
+            <td class="val-high">✅ Interior face</td>
+            <td class="val-high">✅ Interior face</td>
+            <td>N/A</td>
+            <td class="val-low">❌ No</td>
+            <td style="color:var(--gold)">Medium ⚠️</td>
+          </tr>
+          <tr>
+            <td>13. Solar Control Glass</td>
+            <td class="val-mid">⚠️ Light films</td>
+            <td class="val-mid">⚠️ Stress analysis</td>
+            <td>N/A</td>
+            <td class="val-low">❌ No</td>
+            <td style="color:var(--gold)">Medium ⚠️</td>
+          </tr>
+          <tr>
+            <td>14. Acoustic Glass</td>
+            <td class="val-high">✅ Yes</td>
+            <td class="val-high">✅ Yes</td>
+            <td>N/A</td>
+            <td class="val-mid">⚠️ Check</td>
+            <td style="color:var(--green)">Low ✅</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <hr class="divider">
+
+    <h2>📊 What Protection Does the Customer Get? (By Glass + Film)</h2>
+    <div class="info-box">
+      💡 All data below is for <strong>single-pane clear glass (1/4" / 6mm)</strong> with 3M film applied — the standard
+      test condition. Performance improves on double-pane glass.
+    </div>
+
+    <div class="compare-wrap">
+      <table class="compare-table">
+        <thead>
+          <tr>
+            <th>Film + Glass Combo</th>
+            <th>UV Protection</th>
+            <th>Heat Block (TSER)</th>
+            <th>Visibility (VLT)</th>
+            <th>Glare Reduction</th>
+            <th>Application</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Clear glass, no film</td>
+            <td class="val-low">38%</td>
+            <td class="val-low">18%</td>
+            <td class="val-high">89%</td>
+            <td class="val-low">None</td>
+            <td>Reference baseline</td>
+          </tr>
+          <tr>
+            <td>+ Prestige 70 (PR70)</td>
+            <td class="val-high">99.9%</td>
+            <td class="val-mid">50%</td>
+            <td class="val-high">69%</td>
+            <td>22%</td>
+            <td>Architectural / Homes</td>
+          </tr>
+          <tr>
+            <td>+ Prestige 50 (PR50)</td>
+            <td class="val-high">99.9%</td>
+            <td class="val-high">56%</td>
+            <td class="val-mid">50%</td>
+            <td>44%</td>
+            <td>Architectural / Homes</td>
+          </tr>
+          <tr>
+            <td>+ Prestige 20 (PR20)</td>
+            <td class="val-high">99.9%</td>
+            <td class="val-high">62%</td>
+            <td class="val-low">21%</td>
+            <td>76%</td>
+            <td>Max heat control</td>
+          </tr>
+          <tr>
+            <td>+ Night Vision 15 (NV15)</td>
+            <td class="val-high">99.9%</td>
+            <td class="val-high">72%</td>
+            <td class="val-low">13%</td>
+            <td>85%</td>
+            <td>Privacy + night views</td>
+          </tr>
+          <tr>
+            <td>+ Night Vision 35 (NV35)</td>
+            <td class="val-high">99.9%</td>
+            <td class="val-mid">47%</td>
+            <td class="val-mid">33%</td>
+            <td>67%</td>
+            <td>Light tint + views</td>
+          </tr>
+          <tr>
+            <td>+ Low E 20 (LE20)</td>
+            <td class="val-high">99.9%</td>
+            <td class="val-high">76%</td>
+            <td class="val-low">20%</td>
+            <td>77%</td>
+            <td>Max energy savings</td>
+          </tr>
+          <tr>
+            <td>+ Low E 70 (LE70)</td>
+            <td class="val-high">99.6%</td>
+            <td class="val-mid">46%</td>
+            <td class="val-high">74%</td>
+            <td>17%</td>
+            <td>Clear + energy savings</td>
+          </tr>
+          <tr>
+            <td>+ Neutral 35</td>
+            <td class="val-high">99%</td>
+            <td class="val-high">56%</td>
+            <td class="val-mid">36%</td>
+            <td>60%</td>
+            <td>Budget solar control</td>
+          </tr>
+          <tr>
+            <td>+ Silver 15 Exterior</td>
+            <td class="val-high">99%</td>
+            <td class="val-high">81%</td>
+            <td class="val-low">17%</td>
+            <td>81%</td>
+            <td>Exterior / Max reflect</td>
+          </tr>
+          <tr>
+            <td>+ Safety S140 (clear)</td>
+            <td class="val-high">99%</td>
+            <td class="val-low">22%</td>
+            <td class="val-high">85%</td>
+            <td>4%</td>
+            <td>Safety only, no heat</td>
+          </tr>
+          <tr>
+            <td>+ Scotchshield S50</td>
+            <td class="val-high">99.9%</td>
+            <td class="val-high">56%</td>
+            <td class="val-mid">49%</td>
+            <td>—</td>
+            <td>Safety + sun control</td>
+          </tr>
+          <tr>
+            <td><strong>Auto: Crystalline 70</strong></td>
+            <td class="val-high">99.9%</td>
+            <td class="val-mid">50%</td>
+            <td class="val-high">69%</td>
+            <td>22%</td>
+            <td>Best auto film (light)</td>
+          </tr>
+          <tr>
+            <td><strong>Auto: Ceramic IR 15</strong></td>
+            <td class="val-high">99.9%</td>
+            <td class="val-high">63%</td>
+            <td class="val-low">16%</td>
+            <td>78%</td>
+            <td>Auto privacy + heat</td>
+          </tr>
+          <tr>
+            <td><strong>Auto: FX HP 20</strong></td>
+            <td class="val-high">99%</td>
+            <td class="val-high">61%</td>
+            <td class="val-low">19%</td>
+            <td>75%</td>
+            <td>Entry auto tint</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="success-box">
+      🎯 <strong>Sales Insight:</strong> The number after the film name (PR<strong>70</strong>, NV<strong>15</strong>,
+      CIR<strong>35</strong>) represents <strong>how much visible light passes through</strong>. PR70 = 70% light passes
+      = lighter appearance. NV15 = 15% light = darker, more private. Lower number = darker film = usually more
+      heat/glare protection.
+    </div>
+  </div>
+
+  <!-- ========== TAB 5: COMPARE ========== -->
+  <div id="compare" class="content">
+    <div class="section-title">FILM COMPARISON</div>
+    <p class="section-sub">Side-by-side comparison to help you recommend the right film for any customer.</p>
+
+    <h2>🚗 Automotive Films — Head to Head</h2>
+    <div class="compare-wrap">
+      <table class="compare-table">
+        <thead>
+          <tr>
+            <th>Feature</th>
+            <th>FX HP Series</th>
+            <th>Ceramic IR Series</th>
+            <th>Crystalline Series</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Technology</td>
+            <td>Dyed polyester</td>
+            <td>Ceramic particles</td>
+            <td>Nano multilayer (200+ layers)</td>
+          </tr>
+          <tr>
+            <td>UV Rejection</td>
+            <td class="val-high">99%</td>
+            <td class="val-high">99.9%</td>
+            <td class="val-high">99.9%</td>
+          </tr>
+          <tr>
+            <td>Infrared Rejection</td>
+            <td class="val-low">35–43%</td>
+            <td class="val-high">78–95%</td>
+            <td class="val-high">95–99%</td>
+          </tr>
+          <tr>
+            <td>TSER (heat block)</td>
+            <td class="val-mid">55–65%</td>
+            <td class="val-high">54–66%</td>
+            <td class="val-high">52–64%</td>
+          </tr>
+          <tr>
+            <td>Signal Interference</td>
+            <td class="val-high">None</td>
+            <td class="val-high">None</td>
+            <td class="val-high">None (5G safe)</td>
+          </tr>
+          <tr>
+            <td>Fade Over Time</td>
+            <td class="val-low">Can purple/fade</td>
+            <td class="val-mid">Good stability</td>
+            <td class="val-high">Excellent stability</td>
+          </tr>
+          <tr>
+            <td>Privacy</td>
+            <td class="val-high">Excellent</td>
+            <td class="val-high">Good</td>
+            <td class="val-mid">Moderate (lighter)</td>
+          </tr>
+          <tr>
+            <td>Price</td>
+            <td class="val-high">$ Entry</td>
+            <td class="val-mid">$$ Mid-Premium</td>
+            <td class="val-low">$$$ Premium</td>
+          </tr>
+          <tr>
+            <td>Best Customer</td>
+            <td>Budget / Fleet</td>
+            <td>Value + performance</td>
+            <td>Best of the best</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2>🏢 Architectural Films — Head to Head</h2>
+    <div class="compare-wrap">
+      <table class="compare-table">
+        <thead>
+          <tr>
+            <th>Feature</th>
+            <th>Night Vision</th>
+            <th>Prestige</th>
+            <th>All Season (Low E)</th>
+            <th>Safety S800</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Primary Purpose</td>
+            <td>Privacy + views</td>
+            <td>Solar + aesthetics</td>
+            <td>Year-round energy</td>
+            <td>Security only</td>
+          </tr>
+          <tr>
+            <td>UV Rejection</td>
+            <td class="val-high">99.9%</td>
+            <td class="val-high">99.9%</td>
+            <td class="val-high">99–99.9%</td>
+            <td class="val-high">&lt;1% UV pass</td>
+          </tr>
+          <tr>
+            <td>Best TSER</td>
+            <td class="val-high">72%</td>
+            <td class="val-high">62%</td>
+            <td class="val-high">76%</td>
+            <td class="val-low">22% (not purpose)</td>
+          </tr>
+          <tr>
+            <td>Visible Light</td>
+            <td class="val-low">13–33%</td>
+            <td class="val-high">21–69%</td>
+            <td class="val-mid">20–74%</td>
+            <td class="val-high">88% (clear)</td>
+          </tr>
+          <tr>
+            <td>Winter Insulation</td>
+            <td class="val-low">No</td>
+            <td class="val-low">No</td>
+            <td class="val-high">Yes ⭐⭐⭐</td>
+            <td class="val-low">No</td>
+          </tr>
+          <tr>
+            <td>Interior Reflectivity</td>
+            <td class="val-high">Low (7–9%)</td>
+            <td class="val-high">Low (5–9%)</td>
+            <td class="val-mid">17–58%</td>
+            <td class="val-high">Low</td>
+          </tr>
+          <tr>
+            <td>Contains Metal?</td>
+            <td class="val-high">No (warm tones)</td>
+            <td class="val-high">No</td>
+            <td class="val-low">Yes</td>
+            <td class="val-high">No</td>
+          </tr>
+          <tr>
+            <td>Night Views</td>
+            <td class="val-high">Excellent ⭐</td>
+            <td class="val-high">Good</td>
+            <td class="val-low">Poor (reflective)</td>
+            <td class="val-high">Excellent</td>
+          </tr>
+          <tr>
+            <td>Best For</td>
+            <td>Homes, hotels</td>
+            <td>Offices, condos</td>
+            <td>Cold + hot climates</td>
+            <td>Banks, schools</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2>🛡️ When to Upsell: FX HP → Ceramic IR → Crystalline</h2>
+    <div class="card">
+      <p style="color:var(--text)"><strong>Start with what the customer cares about most:</strong></p>
+      <ul>
+        <li><strong>Just wants privacy and UV protection?</strong> → FX HP Series is perfect and affordable.</li>
+        <li><strong>Wants heat reduction + privacy?</strong> → Ceramic IR Series gives ceramic technology at a mid
+          price.</li>
+        <li><strong>Wants the best — lighter look but maximum performance + signal safety?</strong> → Crystalline
+          Series. It's the flagship. Sells itself once you explain 200+ nano-layers and 97%+ IR rejection.</li>
+        <li><strong>Has a luxury car and is very particular?</strong> → Crystalline 90 (almost invisible, yet blocks
+          tons of heat) or Crystalline 70.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ========== TAB 6: SALES ========== -->
+  <div id="sales" class="content">
+    <div class="section-title">SALES SCRIPTS & TIPS</div>
+    <p class="section-sub">Proven ways to explain 3M window film to customers clearly and confidently.</p>
+
+    <h2>🗣️ The Core Sales Conversation</h2>
+
+    <div class="script-block">
+      <div class="script-tag">Opening Hook</div>
+      <div class="script-text">"Did you know that up to 70% of the heat in your car or office comes through the glass?
+        Our 3M window films block that heat at the source — so your air conditioning works less, you save money, and
+        you're more comfortable. Plus, we block 99.9% of the UV rays that fade your furniture and damage your skin."
+      </div>
+      <div class="script-tip">💡 Open with benefits the customer feels: heat, savings, protection. Numbers make it real.
+      </div>
+    </div>
+
+    <div class="script-block">
+      <div class="script-tag">Handling "But I can't see through tinted windows"</div>
+      <div class="script-text">"That's actually a common misconception. Our Crystalline and Prestige series look almost
+        like regular glass from inside — you can see everything clearly. The film works by blocking infrared heat and UV
+        rays, which are invisible, not visible light. So you get cooler without going dark."</div>
+      <div class="script-tip">💡 Show them the Crystalline 70 or Prestige 70 — nearly clear but blocks massive heat.
+        This is always a wow moment.</div>
+    </div>
+
+    <div class="script-block">
+      <div class="script-tag">Automotive Upsell</div>
+      <div class="script-text">"Let me ask you — do you use Bluetooth, GPS, or satellite radio in your car? Some
+        metallic window films can interfere with those signals. 3M's Crystalline and Ceramic IR series are 100%
+        metal-free, so you never lose signal. It's the same technology, better performance, no signal loss."</div>
+      <div class="script-tip">💡 Metal-free = signal safe is a strong differentiator, especially for BMW, Mercedes,
+        Tesla owners.</div>
+    </div>
+
+    <div class="script-block">
+      <div class="script-tag">Residential / Office Building</div>
+      <div class="script-text">"Window film is one of the fastest payback home improvements you can make. Energy savings
+        alone can pay for the film in 2–3 years. But meanwhile, your furniture stops fading, your rooms are cooler, and
+        your utility bills drop. It's a one-time investment that protects for 10–15 years."</div>
+      <div class="script-tip">💡 The All Season Low E series is your best tool here — mention payback in less than 3
+        years from energy savings.</div>
+    </div>
+
+    <div class="script-block">
+      <div class="script-tag">Safety Film — Security Customers</div>
+      <div class="script-text">"When glass breaks — from a break-in, earthquake, or even a storm — the biggest danger
+        isn't the impact, it's the flying glass shards. Our safety film holds the glass together like a web. The window
+        can crack but won't shatter into pieces. It also buys time — an intruder has to work much harder to get through
+        filmed glass."</div>
+      <div class="script-tip">💡 Demo video of glass breaking with vs. without film is extremely powerful. Ask your 3M
+        rep for marketing materials.</div>
+    </div>
+
+    <hr class="divider">
+    <h2>💡 Quick Tips for Success</h2>
+    <div class="tip-grid">
+      <div class="tip-card">
+        <div class="tip-icon">🔢</div>
+        <h4>Know Your Numbers</h4>
+        <p>Memorize a few key specs: "99.9% UV block," "up to 97% infrared rejection," "payback under 3 years." Numbers
+          build trust fast.</p>
+      </div>
+      <div class="tip-card">
+        <div class="tip-icon">🪟</div>
+        <h4>Always Ask Glass Type First</h4>
+        <p>Before recommending any film, ask what type of glass the customer has. Low-E or specialty glass needs a
+          compatibility check before any quote.</p>
+      </div>
+      <div class="tip-card">
+        <div class="tip-icon">📈</div>
+        <h4>Lead With the Best</h4>
+        <p>Start with Crystalline or Prestige (premium), then offer Ceramic IR or Night Vision as the "excellent value"
+          option. Never lead with entry-level.</p>
+      </div>
+      <div class="tip-card">
+        <div class="tip-icon">🌡️</div>
+        <h4>The Touch Demo</h4>
+        <p>Hold a sample up to the sun and let them put their hand behind it. They'll feel how much less heat comes
+          through. This sells the film instantly.</p>
+      </div>
+      <div class="tip-card">
+        <div class="tip-icon">📋</div>
+        <h4>Reference the Data Sheet</h4>
+        <p>If a customer asks detailed specs, pull out the technical data sheet. It builds credibility and shows you use
+          official 3M documentation.</p>
+      </div>
+      <div class="tip-card">
+        <div class="tip-icon">⚠️</div>
+        <h4>Never Over-Promise</h4>
+        <p>Films don't stop intruders or bullets. Don't promise hurricane protection in Florida (banned by law). Be
+          honest — customers respect it and it protects you.</p>
+      </div>
+      <div class="tip-card">
+        <div class="tip-icon">🎖️</div>
+        <h4>3M Brand = Trust</h4>
+        <p>3M has been making films for 40+ years. Mention the 3M warranty. The brand alone often closes deals —
+          especially with corporate and government clients.</p>
+      </div>
+      <div class="tip-card">
+        <div class="tip-icon">🔄</div>
+        <h4>Follow Up on Care</h4>
+        <p>Remind customers: do NOT wash windows for 30 days after installation. Film needs to fully cure. This prevents
+          complaints and builds trust.</p>
+      </div>
+    </div>
+
+    <h2>🎯 Customer Type → Film Recommendation</h2>
+    <div class="card">
+      <div class="stat-row"><span class="stat-label" style="font-weight:600;color:#111827">Luxury car owner
+          (BMW/Mercedes/Tesla)</span><span class="stat-value" style="color:var(--teal)">→ Crystalline 70 or 80</span>
+      </div>
+      <div class="stat-row"><span class="stat-label" style="font-weight:600;color:#111827">Fleet vehicle (Toyota RAV4,
+          Land Cruiser)</span><span class="stat-value" style="color:var(--teal)">→ FX HP 20 or Ceramic IR 15</span>
+      </div>
+      <div class="stat-row"><span class="stat-label" style="font-weight:600;color:#111827">Home owner — wants clear
+          windows</span><span class="stat-value" style="color:var(--teal)">→ Prestige 70 or Low E 70</span></div>
+      <div class="stat-row"><span class="stat-label" style="font-weight:600;color:#111827">Home owner — wants
+          privacy</span><span class="stat-value" style="color:var(--teal)">→ Night Vision 15 or 25</span></div>
+      <div class="stat-row"><span class="stat-label" style="font-weight:600;color:#111827">Office building
+          (large)</span><span class="stat-value" style="color:var(--teal)">→ Prestige 50 or Low E 35</span></div>
+      <div class="stat-row"><span class="stat-label" style="font-weight:600;color:#111827">Bank / School /
+          Government</span><span class="stat-value" style="color:var(--teal)">→ Scotchshield S800 + IPA Sealant</span>
+      </div>
+      <div class="stat-row"><span class="stat-label" style="font-weight:600;color:#111827">Hotel / Resort</span><span
+          class="stat-value" style="color:var(--teal)">→ Prestige 40 or Night Vision 25</span></div>
+      <div class="stat-row"><span class="stat-label" style="font-weight:600;color:#111827">Cold climate (energy
+          savings)</span><span class="stat-value" style="color:var(--teal)">→ All Season Low E 35</span></div>
+      <div class="stat-row"><span class="stat-label" style="font-weight:600;color:#111827">Hot climate only (max heat
+          block)</span><span class="stat-value" style="color:var(--teal)">→ Prestige 20 or Night Vision 15</span></div>
+    </div>
+  </div>
+
+  <!-- ========== TAB 7: LEARNING PATH ========== -->
+  <div id="learn" class="content">
+    <div class="section-title">YOUR LEARNING PATH</div>
+    <p class="section-sub">How to become a confident 3M Window Film Sales Agent — step by step, the fast way.</p>
+
+    <h2>🎯 Week-by-Week Beginner Plan</h2>
+
+    <div class="path-step">
+      <div class="step-num">1</div>
+      <div class="step-content">
+        <h3>Week 1: Master the Vocabulary</h3>
+        <p>Study the Basics tab of this guide every day. Know VLT, TSER, UV Block, SHGC, IRR cold. Practice explaining
+          each term in one simple sentence without using technical jargon. When you can explain it to your family member
+          who knows nothing about glass — you're ready.</p>
+      </div>
+    </div>
+    <div class="path-step">
+      <div class="step-num">2</div>
+      <div class="step-content">
+        <h3>Week 2: Know the 3M Product Lines</h3>
+        <p>Memorize the 3 automotive series (FX HP → Ceramic IR → Crystalline) and the key architectural ones (Night
+          Vision, Prestige, All Season). Know which is the entry, mid, and premium option. Study the Films tab and be
+          able to answer: "What's the difference between Ceramic IR and Crystalline?"</p>
+      </div>
+    </div>
+    <div class="path-step">
+      <div class="step-num">3</div>
+      <div class="step-content">
+        <h3>Week 3: Learn Glass Types</h3>
+        <p>Study the 14 glass types. Focus on the "Can I install film?" column. Know which 5 glass types are easy
+          (float, tempered, laminated, insulated, acoustic), which 4 need caution (Low-E, tinted, solar control, HS),
+          and which 5 to avoid (patterned, wired, self-cleaning, smart glass, frosted). This protects you from
+          installation mistakes.</p>
+      </div>
+    </div>
+    <div class="path-step">
+      <div class="step-num">4</div>
+      <div class="step-content">
+        <h3>Week 4: Practice Sales Scripts</h3>
+        <p>Role-play the sales conversations from the Sales Tips tab. Practice with a friend or in the mirror. Handle
+          these 3 objections cold: "It's too expensive," "I can't see through tinted glass," and "I don't need security
+          film." Record yourself explaining 3M Crystalline in 30 seconds.</p>
+      </div>
+    </div>
+    <div class="path-step">
+      <div class="step-num">5</div>
+      <div class="step-content">
+        <h3>Month 2: Go Deeper</h3>
+        <p>Read the actual 3M Technical Specification PDFs (the ones provided). Learn the blast ratings, tensile
+          strength, and ANSI standards — not to memorize them, but to know they exist so you can reference them with
+          technical buyers. Visit 3M.com/windowfilm for the latest products and training videos.</p>
+      </div>
+    </div>
+    <div class="path-step">
+      <div class="step-num">6</div>
+      <div class="step-content">
+        <h3>Ongoing: Build Product Knowledge Through Installation</h3>
+        <p>Attend as many actual installations as you can. Watch how the film is applied — wet application, squeegees,
+          cutting. Understand installation quality issues (bubbles, peeling, edges) so you can recognize a good vs. bad
+          install. This makes you credible with both customers and installers.</p>
+      </div>
+    </div>
+
+    <hr class="divider">
+    <h2>📚 Fast Learning Resources</h2>
+    <div class="tip-grid">
+      <div class="tip-card">
+        <div class="tip-icon">🌐</div>
+        <h4>3M.com/windowfilm</h4>
+        <p>Official product pages, videos, find-a-dealer tool. Bookmark this and visit weekly for new products.</p>
+      </div>
+      <div class="tip-card">
+        <div class="tip-icon">📄</div>
+        <h4>Technical Data Sheets</h4>
+        <p>You have them uploaded here! Each film has a TDS with all specs. Print them and study the numbers until
+          they're familiar.</p>
+      </div>
+      <div class="tip-card">
+        <div class="tip-icon">🎥</div>
+        <h4>YouTube — 3M Window Film</h4>
+        <p>Search "3M Crystalline window film review" and "3M Prestige install" — real videos showing performance and
+          installation.</p>
+      </div>
+      <div class="tip-card">
+        <div class="tip-icon">🏪</div>
+        <h4>Visit an Authorized Dealer</h4>
+        <p>Spend a day at a 3M dealer. See physical samples, watch installations, learn from experienced fitters.
+          Real-world beats any manual.</p>
+      </div>
+      <div class="tip-card">
+        <div class="tip-icon">📱</div>
+        <h4>3M Dealer Training</h4>
+        <p>Ask your 3M regional representative about online training modules. 3M offers official certification programs
+          for dealers.</p>
+      </div>
+      <div class="tip-card">
+        <div class="tip-icon">🔬</div>
+        <h4>IR Thermometer Demo</h4>
+        <p>Invest in a cheap IR thermometer. Measure temperature with and without film. The dramatic difference closes
+          sales like nothing else.</p>
+      </div>
+    </div>
+
+    <div class="success-box">
+      🏆 <strong>Your 3M Sales Agent Cheat Sheet:</strong><br><br>
+      <strong>Automotive:</strong> FX HP (budget) → Ceramic IR (performance) → Crystalline (premium, 5G-safe)<br>
+      <strong>Architectural:</strong> Night Vision (privacy/views) → Prestige (solar+clarity) → Low E (energy savings) →
+      Safety (security)<br>
+      <strong>Glass Caution:</strong> Always check Low-E, tinted, and insulated glass for thermal stress before
+      recommending dark films<br>
+      <strong>Key Number:</strong> All 3M films block 99%+ UV rays — this is always true regardless of the series<br>
+      <strong>IPA Sealant:</strong> Required for safety film on tempered glass (spontaneous breakage protection)
+    </div>
+  </div>
+
+  <script>
+    function showTab(id) {
+      document.querySelectorAll('.content').forEach(c => c.classList.remove('active'));
+      document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+      event.target.classList.add('active');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  </script>
+
+</body>
+
+</html>
